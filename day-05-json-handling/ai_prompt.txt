@@ -1,0 +1,15 @@
+You are an AI assistant helping a small business classify customer leads.
+
+Given the following customer data in JSON format, analyze the engagement score and return a JSON response with:
+- lead_category: hot, warm, or cold
+- reasoning: short explanation
+
+Rules:
+- score >= 80 → hot
+- score >= 60 → warm
+- score < 60 → cold
+
+Input JSON:
+{{CUSTOMER_DATA}}
+
+Return ONLY valid JSON.

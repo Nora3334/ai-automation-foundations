@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Alice",
+        "lead_category": "warm",
+        "reasoning": "Engagement score indicates moderate interest."
+    },
+    {
+        "name": "Bob",
+        "lead_category": "hot",
+        "reasoning": "High engagement score shows strong buying intent."
+    }
+]
