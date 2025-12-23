@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Alice",
+        "email": "alice@gmail.com",
+        "score": 65,
+        "status": "warm",
+        "contacted": false
+    },
+    {
+        "name": "Bob",
+        "email": "bob@yahoo.com",
+        "score": 85,
+        "status": "hot",
+        "contacted": false
+    }
+]
