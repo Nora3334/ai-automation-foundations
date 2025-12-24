@@ -1,6 +1,0 @@
-# No external dependencies required
-
-python-dotenv
-openai
-pandas
-
