@@ -1,25 +1,29 @@
-import os
-from preprocess import load_leads
-from ai_simulator import simulate_ai_classification
-from postprocess import save_json, save_csv
+import json
+from pre_processing import load_leads
+from ai_classifier import classify_lead
+from post_processing import save_json, save_csv
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-INPUT_CSV = os.path.join(BASE_DIR, "../data/leads.csv")
-OUTPUT_JSON = os.path.join(BASE_DIR, "../data/classified_leads.json")
-OUTPUT_CSV = os.path.join(BASE_DIR, "../data/classified_leads.csv")
+INPUT_CSV = "data/input_leads.csv"
+OUTPUT_JSON = "data/classified_leads.json"
+OUTPUT_CSV = "data/classified_leads.csv"
 
 def main():
     leads = load_leads(INPUT_CSV)
-    ai_results = simulate_ai_classification(leads)
+    results = []
 
-    save_json(ai_results, OUTPUT_JSON)
-    save_csv(ai_results, OUTPUT_CSV)
+    for lead in leads:
+        classification = classify_lead(lead)
+        classification_data = json.loads(classification)
+
+        results.append({
+            "lead": lead,
+            "classification": classification_data
+        })
+
+    save_json(results, OUTPUT_JSON)
+    save_csv(results, OUTPUT_CSV)
 
     print("Lead classification completed successfully.")
-    print("Outputs generated:")
-    print("- JSON:", OUTPUT_JSON)
-    print("- CSV:", OUTPUT_CSV)
 
 if __name__ == "__main__":
     main()
