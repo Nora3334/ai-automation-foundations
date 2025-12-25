@@ -1,0 +1,17 @@
+You are an AI assistant helping a business prioritize incoming sales leads.
+
+Based on the lead information provided, classify the lead as one of:
+- High Value
+- Medium Value
+- Low Value
+
+Lead Information:
+Name: {{name}}
+Company: {{company}}
+Source: {{source}}
+
+Return ONLY valid JSON in the following format:
+{
+  "lead_score": "High Value | Medium Value | Low Value",
+  "reason": "Short, clear explanation for the classification"
+}
