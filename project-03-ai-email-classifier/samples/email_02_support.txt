@@ -1,0 +1,6 @@
+Hello,
+
+We’re having an issue with the dashboard. The login works, but the reports page loads blank and times out. This started today around 10 AM. Can you help urgently?
+
+Regards,
+Nina
